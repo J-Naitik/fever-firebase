@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Earning Fever</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #101b35, #182c55);
+      padding: 20px;
+    }
+
+    .popup {
+      width: 100%;
+      max-width: 380px;
+      background: white;
+      padding: 35px 25px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      width: 75px;
+      height: 75px;
+      background: #229ED9;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 38px;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #17233e;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #777;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .telegram-btn,
+    .continue-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 9px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .telegram-btn {
+      background: #229ED9;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .telegram-btn:hover {
+      background: #168ac0;
+    }
+
+    .continue-btn {
+      background: #16a34a;
+      color: white;
+    }
+
+    .continue-btn:disabled {
+      background: #c5cbd3;
+      color: #777;
+      cursor: not-allowed;
+    }
+
+    .status {
+      font-size: 12px;
+      color: #888;
+      margin-top: 18px;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="popup">
+
+    <div class="logo">➤</div>
+
+    <h1>Join Earning Fever</h1>
+
+    <p>
+      Join our Telegram channel first.
+      After clicking the Telegram button,
+      you can continue to the website.
+    </p>
+
+    <a
+      class="telegram-btn"
+      href="https://t.me/+XMUV5BPnmp05Nzll"
+      target="_blank"
+      rel="noopener noreferrer"
+      id="telegramBtn"
+    >
+      ✈ Join Telegram Channel
+    </a>
+
+    <button
+      class="continue-btn"
+      id="continueBtn"
+      disabled
+    >
+      Continue →
+    </button>
+
+    <p class="status" id="status">
+      Please click the Telegram button to enable Continue.
+    </p>
+
+  </div>
+
+  <script>
+    const telegramBtn = document.getElementById("telegramBtn");
+    const continueBtn = document.getElementById("continueBtn");
+    const status = document.getElementById("status");
+
+    // Enable Continue after Telegram link click
+    telegramBtn.addEventListener("click", function() {
+      continueBtn.disabled = false;
+
+      status.textContent =
+        "Telegram link clicked! You can now continue.";
+    });
+
+    // Redirect to destination URL
+    continueBtn.addEventListener("click", function() {
+      if (!continueBtn.disabled) {
+        window.location.href =
+          "https://justifier.pages.dev/";
+      }
+    });
+  </script>
+
+</body>
+</html>
